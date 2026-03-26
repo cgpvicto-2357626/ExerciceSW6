@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import router from './routes/pokemons.route.js';
+import router from './src/routes/pokemons.route.js';
 //import utilisateurRoutes from './routes/utilisateur.route.js';        
 //import authentification from './middlewares/authentification.middleware.js'; 
 import swaggerJsdoc from 'swagger-jsdoc';
