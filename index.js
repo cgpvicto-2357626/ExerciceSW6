@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import pokemonsRoutes from './routes/pokemons.route.js';
+import router from './routes/pokemons.route.js';
 //import utilisateurRoutes from './routes/utilisateur.route.js';        
 //import authentification from './middlewares/authentification.middleware.js'; 
 import swaggerJsdoc from 'swagger-jsdoc';
@@ -34,7 +34,7 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 //app.use('/api/users', utilisateurRoutes);                     
-app.use('/api/pokemons', pokemonsRoutes); 
+app.use('/api/pokemons', router); 
 
 app.listen(PORT, () => {
     console.log(`Serveur démarré sur le port ${PORT}`);
